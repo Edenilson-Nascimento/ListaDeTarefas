@@ -1,5 +1,5 @@
 // src/pages/Home.jsx
-import { useState } from 'react'; // 1. Importante!
+import { useState, useEffect} from 'react'; // 1. Importante!
 import S from './Home.module.scss'
 
 const Home = () => {
@@ -7,7 +7,18 @@ const Home = () => {
     const [novaTarefa, setNovaTarefa] = useState("");
     
     // Estado para guardar a lista (começa vazia)
-    const [lista, setLista] = useState([]);
+    const [lista, setLista] = useState(() => {
+        const listaSalva = localStorage.getItem("minhasTarefas");
+        if(listaSalva){
+            return JSON.parse(listaSalva);
+        }else{
+            return [];
+        }
+    });
+
+    useEffect(() => {
+        localStorage.setItem("minhasTarefas", JSON.stringify(lista))
+    }, [lista])
 
     // Função que adiciona a tarefa
     const adicionarTarefa = (e) => {

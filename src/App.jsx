@@ -7,6 +7,7 @@ import ErroDePagina from './pages/notFound/NotFound.jsx'
 import Usuario from './components/usuario/Usuario.jsx'
 import Footer from './components/footer/Footer.jsx'
 import Main from './components/main/Main.jsx'
+import ListaDeConvidados from './pages/laboratorio/ListaDeConvidados.jsx'
 function App() {
   
 
@@ -20,6 +21,7 @@ function App() {
           <Route path='/sobre' element={<Sobre />} />
           <Route path='/usuario/:id' element={<Usuario />} />
           <Route path='*' element={<ErroDePagina />} />
+          <Route path='/laboratorio/convidados' element={<ListaDeConvidados />} />
         </Routes>
 
         </Main>
