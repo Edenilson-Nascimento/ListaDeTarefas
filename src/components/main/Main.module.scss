@@ -1,0 +1,6 @@
+.main-container {
+  // 'vh' significa Viewport Height (altura da tela)
+  // 100vh é a tela toda. Tiramos um pouco para descontar o header/footer
+  min-height: 80vh; 
+  padding: 20px;
+}

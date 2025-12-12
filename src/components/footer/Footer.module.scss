@@ -1,0 +1,26 @@
+// Footer.scss
+
+footer {
+  background-color: #063083; // O mesmo azul do header para manter a identidade
+  color: white;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+  margin-top: auto; // Isso ajuda se usarmos Flexbox no pai para empurrar o footer pra baixo
+  
+  // Uma borda sutil em cima para separar
+  border-top: 4px solid darken(#063083, 10%);
+
+  p {
+    margin: 0; // Tira as margens padrão do parágrafo
+    font-family: sans-serif;
+    font-size: 0.9rem;
+    opacity: 0.8; // Deixa o texto levemente transparente
+    
+    // Efeito legal: quando passa o mouse no texto, ele brilha
+    &:hover {
+      opacity: 1;
+      cursor: default;
+    }
+  }
+}

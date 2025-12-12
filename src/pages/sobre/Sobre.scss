@@ -1,0 +1,35 @@
+.sobre-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); // Sombra suave
+  display: flex; // Coloca a foto ao lado do texto
+  align-items: center;
+  gap: 20px;
+  font-family: sans-serif;
+
+  .foto-perfil {
+    img {
+      border-radius: 50%; // Deixa a foto redonda
+      border: 3px solid #063083; // Borda com a cor do tema
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+    }
+  }
+
+  .conteudo-texto {
+    h1 {
+      color: #063083;
+      margin-bottom: 10px;
+    }
+
+    p {
+      line-height: 1.5; // Melhora a leitura
+      color: #555;
+      margin-bottom: 10px;
+    }
+  }
+}

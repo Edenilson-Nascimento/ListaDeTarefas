@@ -1,0 +1,39 @@
+.erro-container {
+  text-align: center; // Centraliza tudo
+  margin-top: 50px;
+  font-family: sans-serif;
+
+  h1 {
+    font-size: 6rem; // Gigante!
+    color: #ff4d4d;
+    margin: 0;
+    line-height: 1;
+  }
+
+  h2 {
+    color: #333;
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+
+  p {
+    color: #666;
+    margin-bottom: 30px;
+  }
+
+  .botao-voltar {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #063083; // Azul do tema
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: transform 0.2s;
+
+    &:hover {
+      background-color: darken(#063083, 10%);
+      transform: scale(1.05); // Aumenta um pouquinho ao passar o mouse
+    }
+  }
+}

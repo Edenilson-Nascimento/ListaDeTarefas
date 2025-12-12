@@ -1,0 +1,75 @@
+// Home.scss
+
+// Vamos criar uma classe container para não afetar outros lugares
+.todo-container {
+  max-width: 500px;
+  margin: 40px auto; // Centraliza na tela
+  text-align: center;
+  font-family: sans-serif;
+
+  h1 {
+    color: #333;
+    margin-bottom: 20px;
+  }
+
+  form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+
+    input {
+      flex: 1; // Ocupa todo o espaço disponível
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #0dca26; // Aquele verde do seu link ativo
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s;
+
+      &:hover {
+        background-color: darken(#0dca26, 10%); // Sass escurece a cor sozinho!
+      }
+    }
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+      background: white;
+      border-bottom: 1px solid #eee;
+      padding: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      
+      &:first-child {
+        border-top: 1px solid #eee;
+      }
+
+      button {
+        background-color: #ff4d4d; // Vermelho para excluir
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-left: 10px;
+
+        &:hover {
+          background-color: darken(#ff4d4d, 10%);
+        }
+      }
+    }
+  }
+}
